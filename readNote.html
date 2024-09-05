@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Note</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #000000;
+            color: #00ff00;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .note-content {
+            background: #000000;
+            border: 2px solid #00ff00;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: left;
+            display: inline-block;
+            width: calc(100% - 40px);
+        }
+        .back-button {
+            background-color: #000000;
+            border: 2px solid #00ff00;
+            color: #00ff00;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            border-radius: 10px;
+            margin: 5px;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgb(0, 255, 0);
+        }
+        .back-button:hover {
+            background-color: #00ff00;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="note-content" id="noteContent">
+            <!-- Note content will be dynamically added here -->
+        </div>
+        <a href="lectNotes.html" class="back-button">Back to Notes</a>
+    </div>
+
+    <script>
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        function displayNote() {
+            const noteId = getQueryParam('id');
+            const notes = JSON.parse(localStorage.getItem('notes') || '[]');
+            const note = notes.find(note => note.id === parseInt(noteId, 10));
+
+            if (note) {
+                document.getElementById('noteContent').innerText = note.content;
+            } else {
+                document.getElementById('noteContent').innerText = 'Note not found.';
+            }
+        }
+
+        // Initialize
+        window.onload = function() {
+            displayNote();
+        }
+    </script>
+</body>
+</html>

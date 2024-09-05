@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Language Revision Guide</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #000000;
+            color: #00ff00;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #000;
+            color: #00ff00;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #00ff00;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .container {
+            padding: 20px;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        .back-button {
+            background-color: #000;
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+            color: #00ff00;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            display: inline-block;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        .back-button:hover {
+            background-color: #00ff00;
+            color: #000;
+            box-shadow: 0 0 15px rgb(0, 255, 0); /* Neon glow effect */
+        }
+
+        .nav-button {
+            background-color: #000000;
+            border: 2px solid #00ff00;
+            color: #00ff00;
+            padding: 12px 25px;
+            text-align: center;
+            font-size: 18px;
+            margin: 10px;
+            border-radius: 12px;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+        }
+
+        .nav-button:hover {
+            background-color: #00ff00;
+            color: #000;
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        .section {
+            display: none;
+            margin: 20px 0;
+            padding: 20px;
+            background: #000;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.8); /* Glowing border effect */
+            text-shadow: 2px #00ff00;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            color: #00ff00;
+            border-top: 2px solid #00ff00;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .example-code {
+            background: #222;
+            padding: 10px;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #00ff00;
+            white-space: pre-wrap;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .nav-button {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="glowing-text">C Language Revision Guide</h1>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-button" aria-label="Back to Home">Back to Home</a>
+        <br><br><br>
+        <div>
+            <button class="nav-button" onclick="showSection('data-types')" aria-label="Go to Data Types section">Data Types</button>
+            <button class="nav-button" onclick="showSection('keywords')" aria-label="Go to Keywords section">Keywords</button>
+            <button class="nav-button" onclick="showSection('strings')" aria-label="Go to Strings section">Strings</button>
+            <button class="nav-button" onclick="showSection('operators')" aria-label="Go to Arithmetic Operators section">Arithmetic Operators</button>
+            <button class="nav-button" onclick="showSection('format-specifiers')" aria-label="Go to Format Specifiers section">Format Specifiers</button>
+            <button class="nav-button" onclick="showSection('control-statements')" aria-label="Go to Control Statements section">Control Statements</button>
+            <button class="nav-button" onclick="showSection('functions')" aria-label="Go to Functions section">Functions</button>
+            <button class="nav-button" onclick="showSection('pointers')" aria-label="Go to Pointers section">Pointers</button>
+            <button class="nav-button" onclick="showSection('arrays')" aria-label="Go to Arrays section">Arrays</button>
+            <button class="nav-button" onclick="showSection('structures')" aria-label="Go to Structures section">Structures</button>
+            <button class="nav-button" onclick="window.location.href='keywords.html'" aria-label="Go to 32 Keywords page">32 Keywords</button>
+            <button class="nav-button" onclick="showSection('C Token')" aria-label="Go to C Token section">C Token</button>
+        </div>
+
+        <!-- Data Types Section -->
+        <section id="data-types" class="section">
+            <h2>Data Types</h2>
+            <h3>Description (English):</h3>
+            <p>Defines the type of data a variable can hold. Common types include <code>int</code>, <code>float</code>, and <code>char</code>.</p>
+            <h3>Description (Roman Urdu):</h3>
+            <p>Data types variable ke data ka type define karte hain. Aam data types mein <code>int</code>, <code>float</code>, aur <code>char</code> shamil hain.</p>
+            <h3>Examples:</h3>
+            <div class="example-code">
+                int age = 20;        // Integer type<br>
+                float height = 5.9;  // Floating-point type<br>
+                char grade = 'A';    // Character type
+            </div>
+            <!-- Note: Expand on this section by including more detailed explanations or edge cases. -->
+        </section>
+
+        <!-- Keywords Section -->
+        <section id="keywords" class="section">
+            <h2>Keywords</h2>
+            <h3>Description (English):</h3>
+            <p>Keywords in C are reserved words that have special meaning. Examples include <code>int</code>, <code>return</code>, <code>if</code>, and <code>while</code>.</p>
+            <h3>Description (Roman Urdu):</h3>
+            <p>C mein, keywords woh reserved words hote hain jo special meaning rakhte hain. Misal ke taur par <code>int</code>, <code>return</code>, <code>if</code>, aur <code>while</code>.</p>
+            <h3>Examples:</h3>
+            <div class="example-code">
+                int main() {<br>
+                    &nbsp;&nbsp;return 0;<br>
+                }
+            </div>
+            <!-- Note: Consider adding notes on how certain keywords behave differently in various contexts. -->
+        </section>
+
+        <!-- Strings Section -->
+        <section id="strings" class="section">
+            <h2>Strings</h2>
+            <h3>Description (English):</h3>
+            <p>In C, strings are arrays of characters ending with a null character <code>'\0'</code>. They are used to represent text.</p>
+            <h3>Description (Roman Urdu):</h3>
+            <p>C mein, strings characters ka array hoti hain jo null character <code>'\0'</code> par end hoti hain. Ye text ko represent karne ke liye use hoti hain.</p>
+            <h3>Examples:</h3>
+            <div class="example-code">
+                char name[20] = "John Doe";  // String example<br>
+                printf("Name: %s", name);    // Prints the string
+            </div>
+            <!-- Note: Discuss potential pitfalls when working with strings in C, such as buffer overflow issues. -->
+        </section>
+
+        <!-- Arithmetic Operators Section -->
+        <section id="operators" class="section">
+            <h2>Arithmetic Operators</h2>
+            <h3>Description (English):</h3>
+            <p>Arithmetic operators in C are used to perform basic arithmetic operations. They include <code>+</code> (addition), <code>-</code> (subtraction), <code>*</code> (multiplication), <code>/</code> (division), and <code>%</code> (modulus).</p>
+            <h3>Description (Roman Urdu):</h3>
+            <p>C mein arithmetic operators basic arithmetic operations perform karte hain. Ye <code>+</code> (addition), <code>-</code> (subtraction), <code>*</code> (multiplication), <code>/</code> (division), aur <code>%</code> (modulus) par mushtamil hote hain.</p>
+            <h3>Examples:</h3>
+            <div class="example-code">
+                int a = 10, b = 5;<br>
+                int sum = a + b;      // Addition<br>
+                int difference = a - b;  // Subtraction<br>
+                int product = a * b;   // Multiplication<br>
+                int quotient = a / b;  // Division<br>
+                int remainder = a % b; // Modulus
+            </div>
+            <!-- Note: Emphasize edge cases, such as division by zero or precision errors in floating-point arithmetic. -->
+        </section>
+
+        <!-- Format Specifiers Section -->
+        <section id="format-specifiers" class="section">
+            <h2>Format Specifiers</h2>
+            <h3>Description (English):</h3>
+            <p>Format specifiers in C define the type of data that a variable holds and how it should be printed. Examples include <code>%d</code> for integers, <code>%f</code> for floats, and <code>%c</code> for characters.</p>
+            <h3>Description (Roman Urdu):</h3>
+            <p>Format specifiers C mein us data type ko define karte hain jo variable hold karta hai aur kaise print hona chahiye. Misal ke taur par <code>%d</code> integers ke liye, <code>%f</code> floats ke liye, aur <code>%c</code> characters ke liye use hota hai.</p>
+            <h3>Examples:</h3>
+            <div class="example-code">
+                int num = 10;<br>
+                printf("Number: %d", num);   // Outputs: Number: 10
+            </div>
+            <!-- Note: Explain other format specifiers like %s, %u, %x, etc., and how to use them effectively. -->
+        </section>
+
+        <!-- Control Statements Section -->
+        <section id="control-statements" class="section">
+            <h2>Control Statements</h2>
+            <h3>Description (English):</h3>
+            <p>Control statements in C alter the flow of program execution based on conditions or loops. These include <code>if</code>, <code>else</code>, <code>for</code>, <code>while</code>, and <code>switch</code>.</p>
+            <h3>Description (Roman Urdu):</h3>
+            <p>C mein control statements program ke execution flow ko conditions ya loops ki buniyad par alter karte hain. In mein <code>if</code>, <code>else</code>, <code>for</code>, <code>while</code>, aur <code>switch</code> shamil hain.</p>
+            <h3>Examples:</h3>
+            <div class="example-code">
+                int a = 10;<br>
+                if (a > 5) {<br>
+                    &nbsp;&nbsp;printf("a is greater than 5");<br>
+                } else {<br>
+                    &nbsp;&nbsp;printf("a is less than or equal to 5");<br>
+                }
+            </div>
+            <!-- Note: Discuss common mistakes in control statements, like missing braces or wrong logical operators. -->
+        </section>
+
+        <!-- Functions Section -->
+        <section id="functions" class="section">
+            <h2>Functions</h2>
+            <h3>Description (English):</h3>
+            <p>Functions in C are blocks of code designed to perform a particular task. They help in modular programming and reusability. A typical function includes a return type, name, parameters, and body.</p>
+            <h3>Description (Roman Urdu):</h3>
+            <p>C mein functions code ke blocks hote hain jo kisi khas task ko perform karne ke liye design kiye gaye hain. Ye modular programming aur reusability mein madad karte hain. Aik typical function return type, name, parameters, aur body par mushtamil hota hai.</p>
+            <h3>Examples:</h3>
+            <div class="example-code">
+                int add(int x, int y) {<br>
+                    &nbsp;&nbsp;return x + y;<br>
+                }
+            </div>
+            <!-- Note: Mention the scope of functions and how they interact with global/local variables. -->
+        </section>
+
+        <!-- Pointers Section -->
+        <section id="pointers" class="section">
+            <h2>Pointers</h2>
+            <h3>Description (English):</h3>
+            <p>Pointers in C are variables that store memory addresses of other variables. They are powerful but can be complex to use correctly. Commonly used with arrays, functions, and dynamic memory allocation.</p>
+            <h3>Description (Roman Urdu):</h3>
+            <p>C mein pointers aise variables hote hain jo doosray variables ke memory addresses ko store karte hain. Ye powerful hote hain lekin sahi tarah se use karna complex ho sakta hai. Ye aksar arrays, functions, aur dynamic memory allocation ke saath use hote hain.</p>
+            <h3>Examples:</h3>
+            <div class="example-code">
+                int x = 10;<br>
+                int *ptr = &x;<br>
+                printf("Value of x: %d", *ptr);   // Outputs: Value of x: 10
+            </div>
+            <!-- Note: Highlight common mistakes with pointers, such as dereferencing NULL pointers or memory leaks. -->
+        </section>
+
+        <!-- Arrays Section -->
+        <section id="arrays" class="section">
+            <h2>Arrays</h2>
+            <h3>Description (English):</h3>
+            <p>Arrays in C are collections of variables of the same type, stored sequentially in memory. They are used to store multiple values in a single variable.</p>
+            <h3>Description (Roman Urdu):</h3>
+            <p>C mein arrays aise variables ki collections hoti hain jo same type ke hote hain aur memory mein sequentially store hote hain. Ye aik single variable mein multiple values ko store karne ke liye use hote hain.</p>
+            <h3>Examples:</h3>
+            <div class="example-code">
+                int numbers[5] = {1, 2, 3, 4, 5};<br>
+                printf("First element: %d", numbers[0]);   // Outputs: First element: 1
+            </div>
+            <!-- Note: Discuss multidimensional arrays and their applications. -->
+        </section>
+
+        <!-- Structures Section -->
+        <section id="structures" class="section">
+            <h2>Structures</h2>
+            <h3>Description (English):</h3>
+            <p>Structures in C are user-defined data types that allow grouping of different data types under a single name. They are used to model real-world entities.</p>
+            <h3>Description (Roman Urdu):</h3>
+            <p>C mein structures user-defined data types hote hain jo different data types ko aik single name ke under group karte hain. Ye real-world entities ko model karne ke liye use hote hain.</p>
+            <h3>Examples:</h3>
+            <div class="example-code">
+                struct Person {<br>
+                    &nbsp;&nbsp;char name[50];<br>
+                    &nbsp;&nbsp;int age;<br>
+                    &nbsp;&nbsp;float height;<br>
+                };<br>
+                struct Person john = {"John Doe", 30, 5.9};<br>
+                printf("Name: %s, Age: %d, Height: %.1f", john.name, john.age, john.height);
+            </div>
+            <!-- Note: Explain how structures can be nested or used with pointers for more complex data management. -->
+        </section>
+        <section id="C Token" class="section">
+            <h2>C Token</h2>
+            <h3>Description (English):</h3>
+            <p>Token is the smallest indivisual unit in a program ,
+                 Tokens are the building blocks of a C program and are used to construct the entire code. These are six types of tokens in C </p>
+            <h3>Description (Roman Urdu):</h3>
+            <p>Tokens C program ke chhote aur indivisual units hote hain. Ye program ke har hissay ko banane ke liye use kiye jaate hain. 
+                Tokens C program ki building blocks hain aur inki madad se poora code construct kiya jaata hai. C mein 6 tarah ke tokens hote hain:
+               </p>
+            <h3>Keywords</h3>
+            <p>Keywords: Reserved words that have a special meaning in C.
+                Jaise - auto , int , else , while .... etc.
+            </p>
+            <h3>Identifiers</h3>
+            <p>Identifiers: Names given to variables , functions , arrays and other user-defined items.
+                Jaise - name , age , address .... etc.</p>
+              <div class="example-code" > <h3>Rules:</h3> <p>[1]Must began with a letter [A-Z] , [a-z] and '_' </p>
+                                <p>[2]Can contain letters , digits[0-9] and underscores '_'</p>
+                                <p>[3]Cannot contain spaces , special characters and symbols</p>
+                                <p>[4]Cannot be a keyword , Case-Sensitive ex- variable and Variable are different</p>
+              </div>
+            <h3>Constants</h3>
+            <p>Constants: Fixed values that do not change during the execution of a program</p>
+           <div class="example-code" > <h3>Types:</h3><p>[1]Integer constant (100,-20)</p>
+                           <p>[2]Floating point constant (eg: 3.14, -0.001)</p>
+                           <p>[3]Character constants (eg: 'A','Z')</p>
+                           <p>[4]String constants (eg: "Hello, World!", "C Programming")</p>
+                           </div>
+            <h3>Operators</h3>
+            <p>Operators: Symbols used to perform operations on operands</p>
+           <div class="example-code" > <h3>Types:</h3> <p>[1]Arithmatic operator ('+','-','*','/','%')</p>
+                            <p>[2]Relational Operators (==, !=, >, <, >=, <=)</p>
+                            <p>[3]Logical Operators (&&, ||, !)</p>
+                            <p>[4]Bitwise Operators (&, |, ^, ~, <<, >>)</p>
+                            <p>[5]Assignment Operators (=, +=, -=, *=, /=, %=, <<=,)</p>
+                            </div>
+            <h3>Punctuators/Separators</h3>
+            <p>Symbols Are used </p>
+            <div class="example-code"> <h3>Symbol and Name</h3>
+                    <p>  ; - Semicolon</p>
+                    <p> { } - Curly Braces</p>
+                    <p> ( ) - Parentheses</p>
+                    <p> [ ] - Square Brackets</p>
+                    <p>  ' - Single Quote</p>
+                    <p>  "  - Double Quote</p>
+                    <p> # - Hash (Pound Sign)</p>
+                    <p> \ - Backslash</p>
+                    <p> / - Forward Slash</p>
+                    
+                     </div>
+            </section>
+    </div>
+
+    <footer>
+        <p>Greetings Fawzan!!&copy; 2024</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function (section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Revision</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #000000;
+            color: #00ff00;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header {
+            background: #000000;
+            color: #00ff00;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #00ff00;
+            box-shadow: 0 0 25px rgba(0, 255, 0, 0.5);
+        }
+        .container {
+            padding: 20px;
+            text-align: left;
+        }
+        .nav-button {
+            background-color: #000000;
+            border: 2px solid #00ff00;
+            color: #00ff00;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgb(0, 255, 0);
+            display: inline-block;
+            margin: 13px; /* Space between buttons */
+        }
+        .nav-button:hover {
+            background-color: #00ff00;
+            color: #000000;
+        }
+        h1, h2 {
+            color: #00ff00;
+        }
+        pre {
+            background: #000000;
+            color: #00ff00;
+            padding: 10px;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Revision</h1>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="nav-button">Back to Home</a> 
+        <a href="lectNotes.html" class="nav-button">Lecture Notes</a>
+        <h2>1. Variables and Data Types</h2>
+        <p><strong>Variables</strong></p>
+        <pre><code>let name = "Tony"; // Reassignable
+const pi = 3.14; // Constant, cannot be reassigned
+var age = 25; // Function-scoped variable</code></pre>
+
+        <p><strong>Data Types</strong></p>
+        <pre><code>let number = 100;       // Number
+let name = "Alice";     // String
+let isActive = true;   // Boolean
+let value = null;      // Null
+let notDefined;        // Undefined
+let uniqueSymbol = Symbol('id'); // Symbol
+let bigIntNumber = 1234567890123456789012345678901234567890n; // BigInt</code></pre>
+
+        <h2>2. Operators</h2>
+        <p><strong>Arithmetic Operators</strong></p>
+        <pre><code>let sum = 5 + 3; // Addition
+let diff = 10 - 4; // Subtraction
+let product = 2 * 3; // Multiplication
+let quotient = 8 / 2; // Division
+let remainder = 7 % 3; // Modulus</code></pre>
+
+        <p><strong>Comparison Operators</strong></p>
+        <pre><code>let isEqual = (5 == 5); // Equal to
+let isNotEqual = (5 != 3); // Not equal to
+let isGreaterThan = (10 &gt; 5); // Greater than
+let isLessThan = (3 &lt; 7); // Less than
+let isGreaterOrEqual = (5 >= 5); // Greater than or equal to
+let isLessOrEqual = (3 <= 4); // Less than or equal to</code></pre>
+
+        <h2>3. Control Flow</h2>
+        <p><strong>Conditional Statements</strong></p>
+        <pre><code>if (age &gt; 18) {
+    console.log("Adult");
+} else {
+    console.log("Minor");
+}
+
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    default:
+        console.log("Other day");
+}</code></pre>
+
+        <h2>4. Functions</h2>
+        <p><strong>Function Declaration</strong></p>
+        <pre><code>function greet(name) {
+    return "Hello, " + name;
+}
+
+console.log(greet("Alice")); // Hello, Alice</code></pre>
+
+        <p><strong>Arrow Functions</strong></p>
+        <pre><code>const add = (a, b) => a + b;
+console.log(add(5, 3)); // 8</code></pre>
+
+        <h2>5. Objects and Arrays</h2>
+        <p><strong>Objects</strong></p>
+        <pre><code>let person = {
+    name: "John",
+    age: 30,
+    greet: function() { return "Hello!"; }
+};
+
+console.log(person.name); // John
+console.log(person.greet()); // Hello!</code></pre>
+
+        <p><strong>Arrays</strong></p>
+        <pre><code>let numbers = [1, 2, 3, 4, 5];
+console.log(numbers[0]); // 1
+numbers.push(6); // Adding an element
+console.log(numbers.length); // 6</code></pre>
+
+        <h2>6. DOM Manipulation</h2>
+        <p><strong>Selecting Elements</strong></p>
+        <pre><code>let element = document.getElementById("myElement");
+let elements = document.querySelectorAll(".myClass");</code></pre>
+
+        <p><strong>Changing Content</strong></p>
+        <pre><code>element.innerHTML = "New Content";
+element.style.color = "red";</code></pre>
+
+        <h2>7. Events</h2>
+        <p><strong>Event Listeners</strong></p>
+        <pre><code>element.addEventListener("click", function() {
+    alert("Element clicked!");
+});</code></pre>
+
+        <h2>8. Asynchronous JavaScript</h2>
+        <p><strong>Callbacks</strong></p>
+        <pre><code>function fetchData(callback) {
+    setTimeout(() => {
+        callback("Data received");
+    }, 1000);
+}
+
+fetchData((message) => {
+    console.log(message);
+});</code></pre>
+
+        <p><strong>Promises</strong></p>
+        <pre><code>let promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Data received");
+    }, 1000);
+});
+
+promise.then((message) => {
+    console.log(message);
+});</code></pre>
+
+        <p><strong>Async/Await</strong></p>
+        <pre><code>async function fetchData() {
+    let response = await new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Data received");
+        }, 1000);
+    });
+    console.log(response);
+}
+
+fetchData();</code></pre>
+    </div>
+</body>
+</html>

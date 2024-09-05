@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Keywords Table - By @8757</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #0a0a0a;
+            color: #00ff00;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #000;
+            color: #00ff00;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid #00ff00;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #111;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        th {
+            background: #222;
+            color: #00ff00;
+        }
+
+        tr:nth-child(even) {
+            background: #1e1e1e;
+        }
+
+        tr:hover {
+            background: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            color: #00ff00;
+            border-top: 2px solid #00ff00;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                border: 1px solid #333;
+                margin-bottom: 10px;
+                display: block;
+                padding: 10px;
+            }
+
+            td {
+                border-bottom: 1px solid #333;
+                position: relative;
+                padding-left: 50%;
+                white-space: nowrap;
+                text-align: right;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 10px;
+                font-weight: bold;
+                text-align: left;
+                color: #00ff00;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>C Programming Keywords</h1>
+    </header>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Keyword</th>
+                    <th>Description (English)</th>
+                    <th>Description (Roman Urdu)</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>auto</td>
+                    <td>Declares automatic variables.</td>
+                    <td>Automatic variables declare karta hai.</td>
+                    <td><code>auto int x;</code></td>
+                </tr>
+                <tr>
+                    <td>break</td>
+                    <td>Exits a loop or switch.</td>
+                    <td>Loop ya switch se exit karta hai.</td>
+                    <td><code>break;</code></td>
+                </tr>
+                <tr>
+                    <td>case</td>
+                    <td>Defines a branch in a switch statement.</td>
+                    <td>Switch statement mein aik branch define karta hai.</td>
+                    <td><code>case 1: ...</code></td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>Declares a character variable.</td>
+                    <td>Character variable declare karta hai.</td>
+                    <td><code>char c = 'A';</code></td>
+                </tr>
+                <tr>
+                    <td>const</td>
+                    <td>Declares constant variables.</td>
+                    <td>Constant variables declare karta hai.</td>
+                    <td><code>const int y = 10;</code></td>
+                </tr>
+                <tr>
+                    <td>continue</td>
+                    <td>Skips the current iteration of a loop.</td>
+                    <td>Loop ki current iteration skip karta hai.</td>
+                    <td><code>continue;</code></td>
+                </tr>
+                <tr>
+                    <td>default</td>
+                    <td>Specifies the default block in a switch.</td>
+                    <td>Switch mein default block specify karta hai.</td>
+                    <td><code>default: ...</code></td>
+                </tr>
+                <tr>
+                    <td>do</td>
+                    <td>Starts a do-while loop.</td>
+                    <td>Do-while loop start karta hai.</td>
+                    <td><code>do { ... } while(condition);</code></td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>Declares a double precision floating-point variable.</td>
+                    <td>Double precision floating-point variable declare karta hai.</td>
+                    <td><code>double z = 0.1234;</code></td>
+                </tr>
+                <tr>
+                    <td>else</td>
+                    <td>Specifies the alternative block in an if statement.</td>
+                    <td>If statement mein alternative block specify karta hai.</td>
+                    <td><code>else { ... }</code></td>
+                </tr>
+                <tr>
+                    <td>enum</td>
+                    <td>Defines an enumeration.</td>
+                    <td>Aik enumeration define karta hai.</td>
+                    <td><code>enum colors {RED, GREEN, BLUE};</code></td>
+                </tr>
+                <tr>
+                    <td>extern</td>
+                    <td>Declares an external variable or function.</td>
+                    <td>External variable ya function declare karta hai.</td>
+                    <td><code>extern int count;</code></td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>Declares a floating-point variable.</td>
+                    <td>Floating-point variable declare karta hai.</td>
+                    <td><code>float temperature = 98.6;</code></td>
+                </tr>
+                <tr>
+                    <td>for</td>
+                    <td>Starts a for loop.</td>
+                    <td>For loop start karta hai.</td>
+                    <td><code>for (int i = 0; i < 10; i++) { ... }</code></td>
+                </tr>
+                <tr>
+                    <td>goto</td>
+                    <td>Transfers control to a labeled statement.</td>
+                    <td>Control ko aik labeled statement par transfer karta hai.</td>
+                    <td><code>goto label;</code></td>
+                </tr>
+                <tr>
+                    <td>if</td>
+                    <td>Starts an if statement.</td>
+                    <td>If statement start karta hai.</td>
+                    <td><code>if (condition) { ... }</code></td>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>Declares an integer variable.</td>
+                    <td>Integer variable declare karta hai.</td>
+                    <td><code>int age = 20;</code></td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>Declares a long integer variable.</td>
+                    <td>Long integer variable declare karta hai.</td>
+                    <td><code>long distance = 1000;</code></td>
+                </tr>
+                <tr>
+                    <td>register</td>
+                    <td>Declares a register variable.</td>
+                    <td>Register variable declare karta hai.</td>
+                    <td><code>register int count = 0;</code></td>
+                </tr>
+                <tr>
+                    <td>return</td>
+                    <td>Exits a function and optionally returns a value.</td>
+                    <td>Function se exit karta hai aur optionally aik value return karta hai.</td>
+                    <td><code>return 0;</code></td>
+                </tr>
+                <tr>
+                    <td>short</td>
+                    <td>Declares a short integer variable.</td>
+                    <td>Short integer variable declare karta hai.</td>
+                    <td><code>short num = 10;</code></td>
+                </tr>
+                <tr>
+                    <td>signed</td>
+                    <td>Declares a signed variable.</td>
+                    <td>Signed variable declare karta hai.</td>
+                    <td><code>signed int value = -1;</code></td>
+                </tr>
+                <tr>
+                    <td>sizeof</td>
+                    <td>Returns the size of a data type or variable.</td>
+                    <td>Data type ya variable ka size return karta hai.</td>
+                    <td><code>sizeof(int);</code></td>
+                </tr>
+                <tr>
+                    <td>static</td>
+                    <td>Declares a static variable.</td>
+                    <td>Static variable declare karta hai.</td>
+                    <td><code>static int counter = 0;</code></td>
+                </tr>
+                <tr>
+                    <td>struct</td>
+                    <td>Defines a structure.</td>
+                    <td>Aik structure define karta hai.</td>
+                    <td><code>struct Person { ... };</code></td>
+                </tr>
+                <tr>
+                    <td>switch</td>
+                    <td>Starts a switch statement.</td>
+                    <td>Switch statement start karta hai.</td>
+                    <td><code>switch (expression) { ... }</code></td>
+                </tr>
+                <tr>
+                    <td>typedef</td>
+                    <td>Creates a new data type name.</td>
+                    <td>Aik naya data type name create karta hai.</td>
+                    <td><code>typedef int myInt;</code></td>
+                </tr>
+                <tr>
+                    <td>union</td>
+                    <td>Defines a union.</td>
+                    <td>Aik union define karta hai.</td>
+                    <td><code>union Data { ... };</code></td>
+                </tr>
+                <tr>
+                    <td>unsigned</td>
+                    <td>Declares an unsigned variable.</td>
+                    <td>Unsigned variable declare karta hai.</td>
+                    <td><code>unsigned int count = 5;</code></td>
+                </tr>
+                <tr>
+                    <td>void</td>
+                    <td>Specifies that a function returns no value.</td>
+                    <td>Specify karta hai ke function koi value return nahi karta.</td>
+                    <td><code>void myFunction() { ... }</code></td>
+                </tr>
+                <tr>
+                    <td>volatile</td>
+                    <td>Indicates that a variable may be modified by external factors.</td>
+                    <td>Indicates karta hai ke variable external factors se modify ho sakta hai.</td>
+                    <td><code>volatile int flag = 1;</code></td>
+                </tr>
+                <tr>
+                    <td>while</td>
+                    <td>Starts a while loop.</td>
+                    <td>While loop start karta hai.</td>
+                    <td><code>while (condition) { ... }</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <h2>Greetings From ~<b>Fawzan</b></h2>
+        <p>© 2024 @8757 | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
